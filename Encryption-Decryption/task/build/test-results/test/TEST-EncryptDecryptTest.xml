@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="EncryptDecryptTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-02-18T10:13:35" hostname="DESKTOP-JE37QBQ" time="0.112">
+  <properties/>
+  <testcase name="start" classname="EncryptDecryptTest" time="0.112"/>
+  <system-out><![CDATA[?[1;31m
+Start test 1?[0m
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
