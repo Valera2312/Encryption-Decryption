@@ -1,23 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="EncryptDecryptTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-02-18T12:51:45" hostname="DESKTOP-JE37QBQ" time="0.156">
+<testsuite name="EncryptDecryptTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-02-18T13:33:58" hostname="DESKTOP-JE37QBQ" time="0.169">
   <properties/>
-  <testcase name="start" classname="EncryptDecryptTest" time="0.156"/>
+  <testcase name="start" classname="EncryptDecryptTest" time="0.169"/>
   <system-out><![CDATA[?[1;31m
 Start test 1?[0m
-> welcome to hyperskill
+> enc
+> Welcome to hyperskill!
 > 5
 ?[1;31m
 Start test 2?[0m
-> treasure
-> 10
+> enc
+> Hello
+> 0
 ?[1;31m
 Start test 3?[0m
-> qdvdqvrxqwxrxwpvrxspvxiqgdiqarairpbiqqid
-> 12
+> enc
+> 012345678
+> 1
 ?[1;31m
 Start test 4?[0m
-> y
-> 10
+> dec
+> \jqhtrj%yt%m~ujwxpnqq&
+> 5
+?[1;31m
+Start test 5?[0m
+> dec
+> Hello
+> 0
+?[1;31m
+Start test 6?[0m
+> dec
+> 222233334444
+> 1
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

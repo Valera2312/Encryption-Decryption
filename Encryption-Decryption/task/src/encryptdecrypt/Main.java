@@ -6,39 +6,84 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+
         Scanner scanner = new Scanner(System.in);
-        String a = scanner.nextLine();
-        int n = scanner.nextInt();
-        //String a = "welcome to hyperskill";
-        //int n = 5;
-        char[] a2 = a.toCharArray();
+        String method = scanner.nextLine();
+        String message = scanner.nextLine();
+        int key = scanner.nextInt();
+
+        if(method.equals("enc")){
+            encryption(message,key);
+        }else {
+            decryption(message,key);
+        }
+
+    }
+
+    public static void decryption(String message, int key){
+
+        char[] message2 = message.toCharArray();
         ArrayList<Character> chars = new ArrayList<Character>();
 
-        for (int i = 0; i < a2.length; i++){
+        for (int i = 0; i < message2.length; i++){
 
-            if(a2[i] == ' ' || a2[i] == '!'){
-                chars.add(a2[i]);
-                continue;
-            }
-            int ch = a2[i];
-            int count = 122 - n;
+           // if(message2[i] == ' ' ){
+                //chars.add(message2[i]);
+                //continue;
+            //}
+            int ch = message2[i];
+            //int count = 122 - key;
 
-            if(ch > count){
-                int s = n - (122 - ch)- 1 + 97;
-                a2[i] = (char) s;
-                chars.add(a2[i]);
+            //if(ch > count){
+                int s = ch - key;
+                message2[i] = (char) s;
+                chars.add(message2[i]);
+                /*
             }else {
-                int s =  ch + n;
-                a2[i] = (char) s;
-                chars.add(a2[i]);
+                int s =  ch + key;
+                message2[i] = (char) s;
+                chars.add(message2[i]);
             }
+                 */
         }
-        for (char a3:
-             chars) {
-                System.out.print(a3);
+        for (char ch:
+                chars) {
+            System.out.print(ch);
+        }
+    }
+
+    public static void  encryption(String message, int key){
+
+        char[] message2 = message.toCharArray();
+        ArrayList<Character> chars = new ArrayList<Character>();
+
+        for (int i = 0; i < message2.length; i++){
+
+            //if(message2[i] == ' '){
+                //chars.add(message2[i]);
+                //continue;
+            //}
+            int ch = message2[i];
+            //int count = 122 - key;
+
+            //if(ch > count){
+                int s = key + ch;
+                message2[i] = (char) s;
+                chars.add(message2[i]);
+
+                /*
+            }else {
+                int s =  ch + key;
+                message2[i] = (char) s;
+                chars.add(message2[i]);
             }
 
-
-        
+                 */
+        }
+        for (char ch:
+                chars) {
+            System.out.print(ch);
+        }
     }
+
 }
