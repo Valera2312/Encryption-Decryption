@@ -2,20 +2,31 @@ package encryptdecrypt;
 
 import javax.swing.text.Style;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
 
-        Scanner scanner = new Scanner(System.in);
-        String method = scanner.nextLine();
-        String message = scanner.nextLine();
-        int key = scanner.nextInt();
 
-        if(method.equals("enc")){
-            encryption(message,key);
+       // Scanner scanner = new Scanner(System.in);
+       // String method = scanner.nextLine();
+        //String message = scanner.nextLine();
+        //int key = scanner.nextInt();
+
+        Map<String, String> hashMap = new HashMap<String, String>();
+        for(int i = 0; args.length - 1  > i; i++){
+
+            hashMap.put(args[i], args[i + 1]);
+
+        }
+
+
+        if(hashMap.get("-mode").equals("enc")){
+            encryption(hashMap.get("-data"),Integer.parseInt(hashMap.get("-key")));
         }else {
-            decryption(message,key);
+            decryption(hashMap.get("-data"),Integer.parseInt(hashMap.get("-key")));
         }
 
     }
@@ -51,6 +62,8 @@ public class Main {
             System.out.print(ch);
         }
     }
+
+
 
     public static void  encryption(String message, int key){
 
