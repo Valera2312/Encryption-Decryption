@@ -20,7 +20,7 @@ class Circle extends Shape {
 
     // override the method here
     public double area() {
-        return Math.PI * Math.pow(this.radius,2);
+        return Math.PI * Math.pow(this.radius, 2);
     }
 }
 
@@ -29,7 +29,7 @@ class Square extends Shape {
 
     // override the method here
     public double area() {
-        return Math.pow(this.side,2);
+        return Math.pow(this.side, 2);
     }
 }
 

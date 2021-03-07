@@ -25,7 +25,7 @@ class Newspaper extends Publication {
     // write your code here
     @Override
     public String getDetails() {
-        return super.getDetails()+", "+"source=\"" + source + "\"";
+        return super.getDetails() + ", " + "source=\"" + source + "\"";
     }
 
 }
